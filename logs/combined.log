@@ -1,0 +1,6 @@
+{"level":"info","message":"Hello World route accessed","service":"acquisition-api"}
+{"level":"info","message":"::1 - - [11/Sep/2026:12:20:49 +0000] \"GET / HTTP/1.1\" 200 12 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36\"","service":"acquisition-api"}
+{"level":"info","message":"::1 - - [11/Sep/2026:12:20:49 +0000] \"GET /favicon.ico HTTP/1.1\" 404 150 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36\"","service":"acquisition-api"}
+{"level":"info","message":"::1 - - [11/Sep/2026:12:50:31 +0000] \"GET /readyz HTTP/1.1\" 404 145 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36\"","service":"acquisition-api"}
+{"level":"info","message":"Hello World route accessed","service":"acquisition-api"}
+{"level":"info","message":"::1 - - [11/Sep/2026:12:52:16 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36\"","service":"acquisition-api"}
