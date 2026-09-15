@@ -19,7 +19,7 @@
     "#routes/*": "./src/routes/*",
     "#services/*": "./src/services/*",
     "#utils/*": "./src/utils/*",
-    "#validation/*": "./src/validation/*"
+    "#validations/*": "./src/validations/*"
   },
   "keywords": [],
   "author": "",
@@ -28,6 +28,7 @@
   "type": "module",
   "dependencies": {
     "@neondatabase/serverless": "^1.1.0",
+    "bcrypt": "^6.0.0",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
