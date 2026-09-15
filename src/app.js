@@ -4,6 +4,7 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
+import authRoutes from './routes/auth.routes.js';
 
 const app = express();
 
@@ -19,5 +20,17 @@ app.get('/', (req, res) => {
   logger.info('Hello World route accessed');
   res.status(200).send('Hello World!');
 });
+
+app.get('/health', (req, res) => {
+  logger.info('Health check route accessed');
+  res.status(200).json({ status: 'UP', timestamp: new Date().toISOString(), uptime: process.uptime() });
+});
+
+app.get('/api', (req, res) => {
+  logger.info('API route accessed');
+  res.status(200).json({ message: 'Welcome to the API!' });
+});
+
+app.use('/api/auth', authRoutes);
 
 export default app;
