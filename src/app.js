@@ -4,7 +4,8 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
-import authRoutes from './routes/auth.routes.js';
+import authRoutes from '#routes/auth.routes.js';
+import { isBrowserRequest, browserHtmlPage, getClientIp } from '#utils/request.js';
 
 const app = express();
 
@@ -17,18 +18,36 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan('combined', { stream: { write: message => logger.info(message.trim()) } }));
 
 app.get('/', (req, res) => {
-  logger.info('Hello World route accessed');
-  res.status(200).send('Hello World!');
+  const clientIp = getClientIp(req);
+  logger.info(`Hello World route accessed by client IP: ${clientIp}`);
+
+  if (isBrowserRequest(req)) {
+    return res.status(200).type('html').send(browserHtmlPage(clientIp));
+  }
+
+  return res.status(200).send(`Your IP: ${clientIp}`);
 });
 
 app.get('/health', (req, res) => {
-  logger.info('Health check route accessed');
-  res.status(200).json({ status: 'UP', timestamp: new Date().toISOString(), uptime: process.uptime() });
+  const clientIp = getClientIp(req);
+  logger.info(`Health check route accessed by client IP: ${clientIp}`);
+
+  if (isBrowserRequest(req)) {
+    return res.status(200).type('html').send(browserHtmlPage(clientIp));
+  }
+
+  return res.status(200).json({ status: 'UP', clientIp, timestamp: new Date().toISOString(), uptime: process.uptime() });
 });
 
 app.get('/api', (req, res) => {
-  logger.info('API route accessed');
-  res.status(200).json({ message: 'Welcome to the API!' });
+  const clientIp = getClientIp(req);
+  logger.info(`API route accessed by client IP: ${clientIp}`);
+
+  if (isBrowserRequest(req)) {
+    return res.status(200).type('html').send(browserHtmlPage(clientIp));
+  }
+
+  return res.status(200).json({ message: 'Welcome to the API!', clientIp });
 });
 
 app.use('/api/auth', authRoutes);

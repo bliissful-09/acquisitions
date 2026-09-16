@@ -72,3 +72,32 @@
 {"level":"info","message":"User created successfully with email: test5@mail.com","service":"acquisition-api"}
 {"level":"info","message":"User signup request received for email: test5@mail.com","service":"acquisition-api"}
 {"level":"info","message":"::1 - - [15/Sep/2026:10:38:02 +0000] \"POST /api/auth/signup HTTP/1.1\" 201 113 \"-\" \"HTTPie\"","service":"acquisition-api"}
+{"level":"info","message":"::1 - - [15/Sep/2026:10:52:18 +0000] \"POST /api/auth/login HTTP/1.1\" 200 11 \"-\" \"HTTPie\"","service":"acquisition-api"}
+{"level":"info","message":"User created successfully with email: test@mail.com","service":"acquisition-api"}
+{"level":"info","message":"User signup request received for email: test@mail.com","service":"acquisition-api"}
+{"level":"info","message":"::1 - - [15/Sep/2026:11:04:00 +0000] \"POST /api/auth/signup HTTP/1.1\" 201 112 \"-\" \"HTTPie\"","service":"acquisition-api"}
+{"level":"info","message":"User created successfully with email: newtest@mail.com","service":"acquisition-api"}
+{"level":"info","message":"User signup request received for email: newtest@mail.com","service":"acquisition-api"}
+{"level":"info","message":"::1 - - [16/Sep/2026:12:30:00 +0000] \"POST /api/auth/signup HTTP/1.1\" 201 115 \"-\" \"HTTPie\"","service":"acquisition-api"}
+{"level":"info","message":"User created successfully with email: third@mail.com","service":"acquisition-api"}
+{"level":"info","message":"User signup request received for email: third@mail.com","service":"acquisition-api"}
+{"level":"info","message":"::1 - - [16/Sep/2026:12:31:41 +0000] \"POST /api/auth/signup HTTP/1.1\" 201 113 \"-\" \"HTTPie\"","service":"acquisition-api"}
+{"level":"info","message":"User created successfully with email: fourth@mail.com","service":"acquisition-api"}
+{"level":"info","message":"User signup request received for email: fourth@mail.com","service":"acquisition-api"}
+{"level":"info","message":"::1 - - [16/Sep/2026:12:35:37 +0000] \"POST /api/auth/signup HTTP/1.1\" 201 113 \"-\" \"HTTPie\"","service":"acquisition-api"}
+{"level":"info","message":"User created successfully with email: fifth@mail.com","service":"acquisition-api"}
+{"level":"info","message":"User signup request received for email: fifth@mail.com","service":"acquisition-api"}
+{"level":"info","message":"::1 - - [16/Sep/2026:12:37:05 +0000] \"POST /api/auth/signup HTTP/1.1\" 201 112 \"-\" \"HTTPie\"","service":"acquisition-api"}
+{"level":"info","message":"Hello World route accessed","service":"acquisition-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [16/Sep/2026:13:18:51 +0000] \"GET / HTTP/1.1\" 200 2249 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36\"","service":"acquisition-api"}
+{"level":"info","message":"Hello World route accessed","service":"acquisition-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [16/Sep/2026:13:18:51 +0000] \"GET / HTTP/1.1\" 200 12 \"-\" \"curl/8.0.1\"","service":"acquisition-api"}
+{"level":"info","message":"Hello World route accessed by client IP: 127.0.0.1","service":"acquisition-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [16/Sep/2026:13:24:51 +0000] \"GET / HTTP/1.1\" 200 2601 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36\"","service":"acquisition-api"}
+{"level":"info","message":"Hello World route accessed by client IP: 127.0.0.1","service":"acquisition-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [16/Sep/2026:13:24:51 +0000] \"GET / HTTP/1.1\" 200 18 \"-\" \"curl/8.0.1\"","service":"acquisition-api"}
+{"level":"info","message":"Hello World route accessed by client IP: ::1","service":"acquisition-api"}
+{"level":"info","message":"::1 - - [16/Sep/2026:13:25:46 +0000] \"GET / HTTP/1.1\" 200 2595 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36\"","service":"acquisition-api"}
+{"level":"info","message":"::1 - - [16/Sep/2026:13:25:46 +0000] \"GET /favicon.ico HTTP/1.1\" 404 150 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36\"","service":"acquisition-api"}
+{"level":"info","message":"Hello World route accessed by client IP: ::1","service":"acquisition-api"}
+{"level":"info","message":"::1 - - [16/Sep/2026:13:26:05 +0000] \"GET / HTTP/1.1\" 200 12 \"-\" \"curl/8.21.0\"","service":"acquisition-api"}

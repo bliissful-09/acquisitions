@@ -20,9 +20,9 @@ export const signup = async (req, res, next) => {
 
         // AUTH SERVICE
         const user = await createUser({ name, email, password, role });
-        console.log('User created:', user);
+        
         const token = jwttoken.sign({ id: user.id, email: user.email, role: user.role });
-        console.log('JWT token generated:', token);
+
         cookies.set(res, 'token', token);
 
         logger.info(`User signup request received for email: ${email}`);
