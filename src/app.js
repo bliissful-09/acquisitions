@@ -32,21 +32,12 @@ app.get('/health', (req, res) => {
   const clientIp = getClientIp(req);
   logger.info(`Health check route accessed by client IP: ${clientIp}`);
 
-  if (isBrowserRequest(req)) {
-    return res.status(200).type('html').send(browserHtmlPage(clientIp));
-  }
-
   return res.status(200).json({ status: 'UP', clientIp, timestamp: new Date().toISOString(), uptime: process.uptime() });
 });
 
 app.get('/api', (req, res) => {
   const clientIp = getClientIp(req);
   logger.info(`API route accessed by client IP: ${clientIp}`);
-
-  if (isBrowserRequest(req)) {
-    return res.status(200).type('html').send(browserHtmlPage(clientIp));
-  }
-
   return res.status(200).json({ message: 'Welcome to the API!', clientIp });
 });
 

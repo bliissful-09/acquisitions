@@ -3,7 +3,7 @@ export const cookies = {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'strict',
-    maxAge: 15 * 60 * 1000, // 1 day
+    maxAge: 15 * 60 * 1000, // 15 minutes in milliseconds
   }),
   set: (res, name, value, options = {}) => {
     const cookieOptions = cookies.getOptions();

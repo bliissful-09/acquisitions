@@ -39,3 +39,23 @@ export const createUser = async ({name, email, password, role = 'user'}) => {
         throw new Error('User creation failed');
     }
 };
+
+export const authenticateUser = async ({ email, password }) => {
+    try {
+        const [user] = await db.select().from(users).where(eq(users.email, email)).limit(1).execute();
+
+        if (!user || !(await bcrypt.compare(password, user.password))) {
+            return null;
+        }
+
+        return {
+            id: user.id,
+            name: user.name,
+            email: user.email,
+            role: user.role,
+        };
+    } catch (error) {
+        logger.error('Error authenticating user:', error);
+        throw new Error('Authentication failed');
+    }
+};
