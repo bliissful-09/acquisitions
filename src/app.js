@@ -6,6 +6,8 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import authRoutes from '#routes/auth.routes.js';
 import { isBrowserRequest, browserHtmlPage, getClientIp } from '#utils/request.js';
+import arcjet, { shield, detectBot, tokenBucket } from "@arcjet/node";
+import { isSpoofedBot } from "@arcjet/inspect";
 
 const app = express();
 
